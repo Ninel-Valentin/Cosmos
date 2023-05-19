@@ -1,0 +1,277 @@
+:root {
+  --cover-h: 50vh;
+  --cover-w: 100vw;
+  --mapPointTextWidth: 10rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes cycleDayNightBG {
+  0% {
+    background-color: rgb(133, 206, 255);
+  }
+  45.23% {
+    background-color: rgb(133, 206, 255);
+  }
+  50% {
+    background-color: black;
+  }
+  95.24% {
+    background-color: black;
+  }
+  100% {
+    background-color: rgb(133, 206, 255);
+  }
+}
+
+.bgCycle {
+  animation: cycleDayNightBG 20s linear infinite forwards;
+}
+
+body {
+  overflow: hidden;
+  background-color: rgb(133, 206, 255);
+}
+
+div#coverContainer {
+  width: var(--cover-w);
+  height: var(--cover-h);
+}
+
+div.cover {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  z-index: 5;
+  width: var(--cover-w);
+  height: var(--cover-h);
+  position: absolute;
+}
+
+div#nightCover {
+  background-image: url("../Images/cosmos.jpg");
+}
+div#nightCover::after {
+  display: block;
+  content: "";
+  width: var(--cover-w);
+  height: var(--cover-h);
+  background: linear-gradient(transparent, black);
+}
+
+@keyframes cycleDayNight {
+  0% {
+    opacity: 1;
+  }
+  45.23% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  95.24% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+div#dayCover {
+  background-image: url("../Images/clouds.jpg");
+  animation: cycleDayNight 20s linear infinite forwards;
+}
+div#dayCover::after {
+  display: block;
+  content: "";
+  width: var(--cover-w);
+  height: var(--cover-h);
+  background: linear-gradient(transparent, rgb(133, 206, 255));
+}
+
+@keyframes cycleDayNightTitle {
+  0% {
+    -webkit-text-stroke: 1px black;
+  }
+  45.23% {
+    -webkit-text-stroke: 1px black;
+  }
+  50% {
+    -webkit-text-stroke: 1px white;
+  }
+  95.24% {
+    -webkit-text-stroke: 1px white;
+  }
+  100% {
+    -webkit-text-stroke: 1px black;
+  }
+}
+
+div#coverContainer > h1 {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px black;
+  font-family: sans-serif;
+  letter-spacing: 2rem;
+  text-align: center;
+  font-size: 10rem;
+  position: relative;
+  z-index: 10;
+  animation: cycleDayNightTitle 20s linear infinite forwards;
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+div#orbit {
+  position: absolute;
+  width: 100vw;
+  bottom: calc(-35vh + 10rem);
+  animation: orbit 20s linear infinite;
+  z-index: 7;
+}
+
+div.star {
+  width: 10rem;
+  aspect-ratio: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+div.star#sun {
+  background-image: url("../Images/sun.png");
+  float: left;
+}
+
+div.star#moon {
+  background-image: url("../Images/moon.png");
+  float: right;
+}
+
+main#roadMap {
+  width: 100vw;
+  height: calc(4 * 10px + 5vh);
+}
+
+main#roadMap > ul {
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+li.mapPoint {
+  outline: black 1px solid;
+  z-index: 5;
+  height: 5vh;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  background-color: gold;
+  transition: box-shadow 0.15s ease-in;
+}
+
+li.mapPoint:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px 10px white;
+  transition: box-shadow 0.35s ease-out;
+}
+
+li.mapPoint > a {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+@keyframes cycleDayNightText {
+  0% {
+    color: black;
+  }
+  45.23% {
+    color: black;
+  }
+  50% {
+    color: white;
+  }
+  95.24% {
+    color: white;
+  }
+  100% {
+    color: black;
+  }
+}
+
+li.mapPoint p {
+  display: block;
+  width: var(--mapPointTextWidth);
+  height: 2rem;
+  position: relative;
+  left: calc((5vh - var(--mapPointTextWidth)) / 2);
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  animation: cycleDayNightText 20s linear infinite forwards;
+}
+
+li.mapPoint p > span {
+  display: table-cell;
+  width: calc(var(--mapPointTextWidth) / 2);
+  height: 2rem;
+  position: relative;
+  top: -1.75rem;
+  left: 0;
+  transition: left 0.15s ease-in, width 0.15s ease-in;
+}
+
+li.mapPoint:hover p > span:first-child {
+  width: 0;
+  transition: width 0.25s ease-in;
+}
+
+li.mapPoint:hover p > span:last-child {
+  left: var(--mapPointTextWidth);
+  transition: left 0.25s ease-in;
+}
+
+li.mapEdge {
+  z-index: 4;
+  position: relative;
+  background-color: gold;
+  height: 1vh;
+  width: 20vw;
+  margin: 0 -20vw;
+}
+
+@keyframes pulsating {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+body > h5 {
+  position: absolute;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  width: 100vw;
+  animation: pulsating 2s linear infinite,
+    cycleDayNightText 20s linear infinite forwards;
+}
