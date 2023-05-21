@@ -1,0 +1,62 @@
+:root {
+  --background-colour0: #1b1b1b;
+  --background-colour1: #292929;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a#back {
+  z-index: 9999;
+  width: 10vw;
+  height: 5vh;
+  background-color: var(--background-colour0);
+  position: sticky;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: 0.15rem dashed white;
+  border-radius: 25px;
+  color: white;
+  font-size: 1.25rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+/* width */
+main::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+main::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+main::-webkit-scrollbar-thumb {
+  background: var(--background-colour0);
+  border-radius: 0 25px;
+}
+
+/* Handle on hover */
+main::-webkit-scrollbar-thumb:hover {
+  background: var(--background-colour1);
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
