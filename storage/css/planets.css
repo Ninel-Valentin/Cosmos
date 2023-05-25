@@ -1,5 +1,5 @@
 main {
-  background-image: url("../images/cosmos0.png");
+  background-image: url("/storage/images/bg/cosmos0.png");
 }
 
 section.planetSection {
@@ -13,6 +13,8 @@ section.planetSection {
 
 section.planetSection > p {
   padding-left: 5rem;
+  font-size: larger;
+  width:70%;
   color: white;
 }
 
@@ -26,36 +28,36 @@ div.planet {
 
 div.planet[data-planet-type="mercury"] {
   transform: scale(0.3);
-  background-image: url("../images/planets/mercury.png");
+  background-image: url("/storage/images/planets/mercury.png");
 }
 div.planet[data-planet-type="venus"] {
   transform: scale(0.5);
-  background-image: url("../images/planets/venus.png");
+  background-image: url("/storage/images/planets/venus.png");
 }
 div.planet[data-planet-type="terra"] {
   transform: scale(0.5);
-  background-image: url("../images/planets/terra.png");
+  background-image: url("/storage/images/planets/terra.png");
 }
 div.planet[data-planet-type="mars"] {
   transform: scale(0.5);
-  background-image: url("../images/planets/mars.png");
+  background-image: url("/storage/images/planets/mars.png");
 }
 div.planet[data-planet-type="jupiter"] {
   transform: scale(0.8);
-  background-image: url("../images/planets/jupiter.png");
+  background-image: url("/storage/images/planets/jupiter.png");
 }
 div.planet[data-planet-type="saturn"] {
-  background-image: url("../images/planets/saturn.png");
+  background-image: url("/storage/images/planets/saturn.png");
 }
 div.planet[data-planet-type="uranus"] {
   transform: scale(0.4);
-  background-image: url("../images/planets/uranus.png");
+  background-image: url("/storage/images/planets/uranus.png");
 }
 div.planet[data-planet-type="neptune"] {
   transform: scale(0.4);
-  background-image: url("../images/planets/neptune.png");
+  background-image: url("/storage/images/planets/neptune.png");
 }
 div.planet[data-planet-type="pluto"] {
   transform: scale(0.3);
-  background-image: url("../images/planets/pluto.png");
+  background-image: url("/storage/images/planets/pluto.png");
 }

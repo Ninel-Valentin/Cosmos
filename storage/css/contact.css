@@ -1,0 +1,116 @@
+main {
+  background-image: url("/storage/images/bg/cosmos.jpg");
+  overflow: hidden;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section#formSection {
+  outline: 2px dashed white;
+  width: 75vw;
+  height: 70vh;
+  margin: auto;
+  margin-top: 10vh;
+}
+
+div.corner {
+  background-image: url("/storage/icons/star.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 10vw;
+  aspect-ratio: 1;
+  position: relative;
+  display: grid;
+  grid-template-columns: 5vw 5vw;
+  grid-template-rows: 5vw 5vw;
+  transform: scale(1.5);
+}
+
+div.corner#topLeftCorner {
+  left: -4.15vw;
+  top: -4.5vw;
+}
+
+div.corner#botRightCorner {
+  bottom: calc(4.5vw + 10vw - 70vh);
+  right: calc(-5.85vw + 10vw - 75vw);
+}
+table#formLayout {
+  height: 60vh;
+  width: 65vw;
+  margin: 5vh 5vw;
+  position: relative;
+  top: -20vw;
+}
+
+table#formLayout td:nth-child(1) {
+  text-align: right;
+  width: 50%;
+}
+
+td#reviewRow label {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+textarea#reviewBox {
+  resize: none;
+  padding: 10px;
+  width: 80%;
+  height: 20vh;
+  margin: 0 10%;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+  cursor: pointer;
+}
+
+table#formLayout input {
+  margin-left: 5%;
+  padding-left: 10px;
+  width: 50%;
+  height: 90%;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+  cursor: pointer;
+}
+
+table#formLayout input:hover,
+textarea#reviewBox:hover {
+  background-color: var(--background-colour1);
+  color: white;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+}
+
+table#formLayout input:focus,
+textarea#reviewBox:focus {
+  background-color: var(--background-colour0);
+  color: white;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+}
+
+textarea#reviewBox,
+table#formLayout input {
+  border-radius: 25px;
+  outline: none;
+  border: none;
+}
+
+div#ratingStars {
+  margin-left: 12.5%;
+  width: fit-content;
+}
+
+.ratingStar {
+  width: 2rem;
+  aspect-ratio: 1;
+  cursor: pointer;
+}
+
+.ratingStar path {
+  fill: gold;
+}
+
+input#preview {
+  position:relative;
+  left: -22.5%;
+}

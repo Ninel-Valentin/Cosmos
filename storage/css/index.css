@@ -1,7 +1,7 @@
 :root {
   --cover-h: 50vh;
   --cover-w: 100vw;
-  --mapPointTextWidth: 10rem;
+  --mapPointTextWidth: 15rem;
 }
 
 * {
@@ -75,7 +75,7 @@ div.cover {
 }
 
 div#nightCover {
-  background-image: url("../images/cosmos.jpg");
+  background-image: url("/storage/images/bg/cosmos.jpg");
 }
 div#nightCover::after {
   display: block;
@@ -104,7 +104,7 @@ div#nightCover::after {
 }
 
 div#dayCover {
-  background-image: url("../images/clouds.jpg");
+  background-image: url("/storage/images/bg/clouds.jpg");
   animation: cycleDayNight 20s linear infinite forwards;
 }
 div#dayCover::after {
@@ -173,12 +173,12 @@ div.star {
 }
 
 div.star#sun {
-  background-image: url("../images/sun.png");
+  background-image: url("/storage/images/sun.png");
   float: left;
 }
 
 div.star#moon {
-  background-image: url("../images/moon.png");
+  background-image: url("/storage/images/moon.png");
   float: right;
 }
 
@@ -203,7 +203,7 @@ li.mapPoint {
   cursor: pointer;
 }
 
-li.mapPoint > a {
+li.mapPoint > a{
   height: 10vh;
   aspect-ratio: 1;
   display: block;

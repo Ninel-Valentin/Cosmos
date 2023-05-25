@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=1920, initial-scale=1.0">
-    <link rel="stylesheet" href="../storage/css/index.css">
+    <link rel="stylesheet" href="/storage/css/index.css">
     <title>Cosmos - Home Page</title>
     <link rel="icon" type="image/x-icon" href="../storage/icons/cosmos.png">
+    <link rel="stylesheet" href="/storage/css/about.css">
+    <script src="/storage/scripts/AboutPopUp.js" defer="defer"></script>
 </head>
 
 <body class="bgCycle">
@@ -61,7 +63,7 @@
                 <a href="./contact.html">
                     <img src="../storage/icons/contact.png">
                     <p>
-                        CONTACT
+                        LEAVE A REVIEW
                         <span class="bgCycle"></span>
                         <span class="bgCycle"></span>
                     </p>
@@ -69,19 +71,48 @@
             </li>
             <li class="mapEdge bgRevCycle"></li>
             <li class="mapPoint">
-                <a href="./about.html">
+                <a href="./reviews.html">
+                    <img src="../storage/icons/reviews.png">
+                    <p>
+                        READ REVIEWS
+                        <span class="bgCycle"></span>
+                        <span class="bgCycle"></span>
+                    </p>
+                </a>
+            </li>
+            <li class="mapEdge bgRevCycle"></li>
+            <li class="mapPoint">
+                <div onclick="OpenPopUp();" class="popUpBtn">
                     <img src="../storage/icons/about.png">
                     <p>
                         ABOUT
                         <span class="bgCycle"></span>
                         <span class="bgCycle"></span>
                     </p>
-                </a>
+                </div>
             </li>
         </ul>
     </main>
     <h5>HOVER THE POINTS</h5>
-
+    <div class="popUpBackground" style="display: none;">
+        <div class="popUpWindow">
+            <button onclick="ClosePopUp();" class="popUpClose">X</button>
+            <h1>About section</h1>
+            <ul>
+                <li>This website presents facts and information about Cosmos, and the Planets & Stars of the Milky Way
+                </li>
+                <li>
+                    About the project:
+                    <ul>
+                        <li>Project realised by Ninel-Valentin Bănică</li>
+                        <li>Written in 2023</li>
+                        <li>As a college project</li>
+                    </ul>
+                </li>
+                <li>This website uses cookies 🍪 to emulate the saving and displaying of reviews.</li>
+            </ul>
+        </div>
+    </div>
 </body>
 
 </html>

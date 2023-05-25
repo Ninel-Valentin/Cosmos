@@ -1,0 +1,55 @@
+main{
+  background-image: url("/storage/images/bg/cosmos3.jpeg");
+}
+
+body {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  box-shadow: inset black 0 0 5vw 10vw;
+}
+
+h1#mainTitle {
+  color: white;
+  position: sticky;
+  top:1vh;
+  filter:drop-shadow(black 0 0 2px);
+  text-align: center;
+}
+
+section.reviewRow {
+  height: 12.5vh;
+  width: 70vw;
+  margin: 5vh auto;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: lightgray;
+  padding: 50px;
+  color: gray;
+  transition: border-radius 0.25s ease-in-out,
+    background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+section.reviewRow:hover {
+  color: black;
+  border-radius: 50px;
+  background-color: white;
+  transition: border-radius 0.25s ease-in-out,
+    background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+div.ratingSection {
+  display: flex;
+  align-items: center;
+}
+
+.ratingStar {
+  width: 2rem;
+  aspect-ratio: 1;
+  cursor: pointer;
+}
+
+.ratingStar path {
+  fill: gold;
+}

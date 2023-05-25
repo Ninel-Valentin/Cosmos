@@ -60,3 +60,18 @@ main {
   overflow-y: auto;
   overflow-x: hidden;
 }
+
+.bigTitle {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px white;
+  font-family: sans-serif;
+  letter-spacing: 2rem;
+  text-align: center;
+  font-size: 10rem;
+  position: relative;
+  z-index: 10;
+}
+
+.bigTitle span{
+  font-size: 4rem;
+}

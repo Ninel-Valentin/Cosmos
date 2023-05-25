@@ -1,3 +1,28 @@
 main {
-  background-image: url("../storage/images/cosmos4.jpg");
+  background-image: url("/storage/images/bg/cosmos0.jpg");
+}
+section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+
+section p,
+section h2 {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  max-width: 60%;
+  height: 25%;
+  padding: 10px;
+}
+
+section iframe {
+  width: 1120px;
+  height: 630px;
+}
+
+img {
+  height: 40vh;
 }

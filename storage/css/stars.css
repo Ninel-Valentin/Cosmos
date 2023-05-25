@@ -1,0 +1,29 @@
+main {
+  background-image: url("/storage/images/bg/cosmos.png");
+}
+
+img#milkyway {
+  width: 40vw;
+  margin: 0 30vw;
+}
+
+section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+
+section p,
+section h2 {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 25px;
+  max-width: 60%;
+  height: 25%;
+  padding: 10px;
+}
+
+img.spitzer {
+  height: 20vw;
+}
