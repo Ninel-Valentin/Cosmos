@@ -1,5 +1,5 @@
 main {
-  background-image: url("/storage/images/bg/cosmos0.jpg");
+  background-image: url("../storage/images/bg/cosmos0.jpg");
 }
 section {
   display: flex;
