@@ -75,7 +75,7 @@ div.cover {
 }
 
 div#nightCover {
-  background-image: url("../images/bg/cosmos.jpg");
+  background-image: url("../img/bg/cosmos.jpg");
 }
 div#nightCover::after {
   display: block;
@@ -104,7 +104,7 @@ div#nightCover::after {
 }
 
 div#dayCover {
-  background-image: url("../images/bg/clouds.jpg");
+  background-image: url("../img/bg/clouds.jpg");
   animation: cycleDayNight 20s linear infinite forwards;
 }
 div#dayCover::after {
@@ -173,12 +173,12 @@ div.star {
 }
 
 div.star#sun {
-  background-image: url("../images/sun.png");
+  background-image: url("../img/sun.png");
   float: left;
 }
 
 div.star#moon {
-  background-image: url("../images/moon.png");
+  background-image: url("../img/moon.png");
   float: right;
 }
 
